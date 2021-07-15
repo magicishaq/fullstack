@@ -9,7 +9,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/photos/random', (req, res) => {
+app.get('/photos', (req, res) => {
   request(
     { url: urls },
     (error, response, body) => {
@@ -22,5 +22,6 @@ app.get('/photos/random', (req, res) => {
   )
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
